@@ -171,6 +171,7 @@ DCC++ BASE STATION is configured through the Config.h file that contains all use
 #include "DCCpp_Uno.h"
 #include "PacketRegister.h"
 #include "CurrentMonitor.h"
+#include "ErrorMonitor.h"
 #include "Sensor.h"
 #include "SerialCommand.h"
 #include "Accessories.h"
@@ -207,6 +208,7 @@ void loop(){
   if(CurrentMonitor::checkTime()){      // if sufficient time has elapsed since last update, check current draw on Main and Program Tracks 
     mainMonitor.check();
     progMonitor.check();
+    errorCheck();
   }
 
   Sensor::check();    // check sensors for activate/de-activate
@@ -557,7 +559,3 @@ void showConfiguration(){
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-
-
-
-
