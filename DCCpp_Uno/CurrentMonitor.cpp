@@ -11,7 +11,7 @@ Part of DCC++ BASE STATION for the Arduino
 #include "CurrentMonitor.h"
 #include "Comm.h"
 
-// #define CURRENT_MONITOR_DEBUG
+//#define CURRENT_MONITOR_DEBUG true
 
 ///////////////////////////////////////////////////////////////////////////////
 
