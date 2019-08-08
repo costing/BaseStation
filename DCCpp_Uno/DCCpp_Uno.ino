@@ -205,11 +205,11 @@ void loop(){
   
   SerialCommand::process();              // check for, and process, and new serial commands
   
-  if(CurrentMonitor::checkTime()){      // if sufficient time has elapsed since last update, check current draw on Main and Program Tracks 
+//  if(CurrentMonitor::checkTime()){      // if sufficient time has elapsed since last update, check current draw on Main and Program Tracks 
     mainMonitor.check();
     progMonitor.check();
     errorCheck();
-  }
+//  }
 
   Sensor::check();    // check sensors for activate/de-activate
   
